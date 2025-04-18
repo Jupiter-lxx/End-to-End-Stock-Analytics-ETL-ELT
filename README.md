@@ -1,2 +1,1 @@
-# End-to-End-Stock-Analytics-ETL-ELT
-# End-to-End-Stock-Analytics-ETL-ELT
+This report demonstrates the design and implementation of an end-to-end data analytics pipeline using Snowflake, Apache Airflow, dbt (Data Build Tool), and a BI tool. The primary focus is on ETL, ELT and visualization. Historical stock market data is used to generate insights such as moving averages and RSI (Relative Strength Index). The final output is presented through an interactive BI dashboard.
