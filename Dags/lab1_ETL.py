@@ -81,8 +81,10 @@ with DAG(
     tags=['ETL'],
     schedule='30 2 * * *'
 ) as dag:
-    target_table = "USER_DB_LEMUR.raw.stock_prices"
-    stock_symbols = ["NVDA", "AAPL"]
+
+    target_table = Variable.get("target_table")
+    stock_symbols = Variable.get("stock_symbols", deserialize_json=True)
+    
     cur = return_snowflake_conn()
 
     data = extract(stock_symbols)
